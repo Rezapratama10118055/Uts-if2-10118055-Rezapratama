@@ -8,13 +8,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText nim,nama,date;
+    ;
     private Button selanjut;
     private RadioGroup grubradio,grubradio2;
-    public static final String EXTRA_MESSAGE = "com.example.utspraktik_if2_10118055_rezapratama";
+    private String KEY_Nim = "nim";
+    private String KEY_Nama = "nama";
+    private String KEY_tanggal= "tanggal";
+
 
 
     @Override
@@ -22,22 +26,63 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-      nim = findViewById(R.id.nim);
-         nama = findViewById(R.id.nama);
-         date = findViewById(R.id.Date);
+     EditText nimaku = findViewById(R.id.nim);
+       EditText namaku = findViewById(R.id.nama);
+       EditText dateku = findViewById(R.id.Date);
       selanjut = findViewById(R.id.selanjutnya);
       selanjut.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View view) {
-              Intent intent = new Intent(MainActivity.this,Kirimdata.class);
-              EditText editText = (EditText) findViewById(R.id.nim);
-              EditText editText1 = (EditText) findViewById(R.id.nama);
-              EditText editText2 = (EditText) findViewById(R.id.Date);
-              String message = editText.getText().toString();
-              String message1 = editText1.getText().toString();
-              String message2 = editText2.getText().toString();
-              intent.putExtra(EXTRA_MESSAGE,message);
-              startActivity(intent);
+              try{
+                  String nim = nimaku.getText().toString();
+                  if (nim != null && nim != ""){
+                      Intent i = new Intent(MainActivity.this, Kirimdata.class);
+                      i.putExtra(KEY_Nim, nim);
+                      startActivity(i);
+
+                  } else {
+                      Toast.makeText(getApplication(), "YOU NEED TO FILL YOUR NAME",Toast.LENGTH_SHORT);
+                  }
+
+              } catch (Exception e){
+                  e.printStackTrace();
+                  Toast.makeText(getApplication(), "ERROR, TRY AGAIN !", Toast.LENGTH_SHORT);
+              }
+
+              try{
+                  String nama = namaku.getText().toString();
+                  if (nama != null && nama != ""){
+                      Intent i = new Intent(MainActivity.this, Kirimdata.class);
+                      i.putExtra(KEY_Nama, nama);
+                      startActivity(i);
+
+                  } else {
+                      Toast.makeText(getApplication(), "YOU NEED TO FILL YOUR NAME",Toast.LENGTH_SHORT);
+                  }
+
+              } catch (Exception e){
+                  e.printStackTrace();
+                  Toast.makeText(getApplication(), "ERROR, TRY AGAIN !", Toast.LENGTH_SHORT);
+              }
+
+              try{
+                  String date = dateku.getText().toString();
+                  if (date != null && date != ""){
+                      Intent i = new Intent(MainActivity.this, Kirimdata.class);
+                      i.putExtra(KEY_Nim, date);
+                      startActivity(i);
+
+                  } else {
+                      Toast.makeText(getApplication(), "YOU NEED TO FILL YOUR NAME",Toast.LENGTH_SHORT);
+                  }
+
+              } catch (Exception e){
+                  e.printStackTrace();
+                  Toast.makeText(getApplication(), "ERROR, TRY AGAIN !", Toast.LENGTH_SHORT);
+              }
+
+
+
           }
       });
 
