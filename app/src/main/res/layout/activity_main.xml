@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        app:srcCompat="@drawable/ic_baseline_keyboard_backspace_24" />
+
+    <TextView
+        android:id="@+id/pengisi"
+        android:layout_width="188dp"
+        android:layout_height="24dp"
+        android:layout_below="@+id/view"
+        android:layout_marginLeft="16dp"
+        android:text="Form Pengisian Data"
+        android:textColor="#040404"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="328dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_below="@+id/pengisi"
+        android:layout_height="94dp"
+        android:background="@drawable/ic_view5"/>
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="130dp"
+        android:nextFocusLeft="25dp"
+        android:text="Info"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="304dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/info"
+        android:layout_marginStart="27dp"
+
+        android:nextFocusLeft="25dp"
+        android:text="Form berikut ini bertujuan untuk memberikan informasi kepada pusat agar dapat mudah dilaporkan" />
+
+    <LinearLayout
+        android:layout_width="383dp"
+        android:layout_height="452dp"
+        android:layout_below="@+id/view2"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NIM"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/nim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_lingkar"
+            android:ems="10"
+            android:hint="Isi Nim"
+            android:inputType="textPersonName" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Nama" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="harus di isi"
+                android:textColor="#16A75C" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/nama"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:background="@drawable/ic_lingkar"
+            android:ems="10"
+            android:hint="Isi Nama"
+            android:inputType="textPersonName" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Nama" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="harus di isi"
+                android:textColor="#16A75C" />
+
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/Date"
+            android:layout_width="match_parent"
+            android:layout_height="29dp"
+            android:background="@drawable/ic_lingkar"
+            android:ems="10"
+            android:inputType="date" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Jenis Kelamin" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="harus di isi"
+                android:textColor="#16A75C" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:orientation="vertical">
+
+
+            <RadioGroup
+                android:id="@+id/grubradio"
+                android:layout_width="match_parent"
+                android:layout_height="144dp">
+
+                <RadioButton
+                    android:id="@+id/laki"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:text="Laki-Laki" />
+
+                <RadioButton
+                    android:id="@+id/perempuan"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:text="Perempuan" />
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Hubungan Dengan anda" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="harus di isi"
+                android:textColor="#16A75C" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="156dp"
+            android:orientation="vertical">
+
+
+            <RadioGroup
+                android:id="@+id/grubradio2"
+                android:layout_width="match_parent"
+                android:layout_height="144dp">
+
+                <RadioButton
+                    android:id="@+id/orangtua"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Orang tua" />
+
+                <RadioButton
+                    android:id="@+id/suami"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Suami" />
+
+                <RadioButton
+                    android:id="@+id/anak"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Anak" />
+
+                <RadioButton
+                    android:id="@+id/kerabat"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp"
+                    android:text="Kerabat dan lainnya" />
+
+
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/selanjutnya"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/ic_btn"
+        android:text="Selanjutnya"
+        android:textColor="@color/white"/>
+
+
+</RelativeLayout>
