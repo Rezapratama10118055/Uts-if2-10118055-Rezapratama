@@ -14,8 +14,8 @@ public class Kirimdata extends AppCompatActivity {
 
 Button ShowDialog;
 
-TextView nimaku,nama,tanggal;
-private String nim,nama1,tanggal1;
+TextView nimaku,namaku,tanggalku;
+private String nim,nama,tanggal;
 
     private String KEY_Nim = "nim";
     private String KEY_Nama = "nama";
@@ -28,17 +28,17 @@ private String nim,nama1,tanggal1;
 
 
         nimaku = (TextView) findViewById(R.id.nim2);
-        nama = (TextView)findViewById(R.id.nama);
-        tanggal =(TextView)findViewById(R.id.tanggallahir);
+        namaku = (TextView)findViewById(R.id.nama);
+        tanggalku =(TextView)findViewById(R.id.tanggallahir);
 
         Bundle extras = getIntent().getExtras();
-        nim = extras.getString(KEY_Nim);
-        nimaku.setText(nim);
-        nama1 = extras.getString(KEY_Nama);
-        nama.setText(nama1);
-        tanggal1 = extras.getString(KEY_tanggal);
-        tanggal.setText(tanggal1);
+        nama = extras.getString("nama");
+        nim = extras.getString("nin");
+        tanggal = extras.getString("tanggal");
 
+        nimaku.setText(nama);
+        namaku.setText(nim);
+        tanggalku.setText(tanggal);
 
 
         ShowDialog = findViewById(R.id.button3);

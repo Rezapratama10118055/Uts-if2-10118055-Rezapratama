@@ -56,7 +56,7 @@
         android:layout_below="@+id/info"
         android:layout_marginStart="27dp"
 
-        android:nextFocusLeft="25dp"
+
         android:text="Form berikut ini bertujuan untuk memberikan informasi kepada pusat agar dapat mudah dilaporkan" />
 
     <LinearLayout
@@ -127,7 +127,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Nama" />
+                android:text="Tanggal" />
 
             <TextView
                 android:id="@+id/textView10"

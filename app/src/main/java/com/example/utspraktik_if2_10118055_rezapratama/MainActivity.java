@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    ;
+
     private Button selanjut;
     private RadioGroup grubradio,grubradio2;
     private String KEY_Nim = "nim";
@@ -25,6 +25,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //        Nama              : Reza Pratama
+//        Kelas             : If-2
+//        NIM               : 10118055
+//        Tanggal Pengerjaan: 05 Juni 2021
 
      EditText nimaku = findViewById(R.id.nim);
        EditText namaku = findViewById(R.id.nama);
@@ -33,55 +37,18 @@ public class MainActivity extends AppCompatActivity {
       selanjut.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View view) {
-              try{
-                  String nim = nimaku.getText().toString();
-                  if (nim != null && nim != ""){
-                      Intent i = new Intent(MainActivity.this, Kirimdata.class);
-                      i.putExtra(KEY_Nim, nim);
-                      startActivity(i);
+              String nama, nim, tanggal, kelamin, hubungan;
 
-                  } else {
-                      Toast.makeText(getApplication(), "YOU NEED TO FILL YOUR NAME",Toast.LENGTH_SHORT);
-                  }
-
-              } catch (Exception e){
-                  e.printStackTrace();
-                  Toast.makeText(getApplication(), "ERROR, TRY AGAIN !", Toast.LENGTH_SHORT);
-              }
-
-              try{
-                  String nama = namaku.getText().toString();
-                  if (nama != null && nama != ""){
-                      Intent i = new Intent(MainActivity.this, Kirimdata.class);
-                      i.putExtra(KEY_Nama, nama);
-                      startActivity(i);
-
-                  } else {
-                      Toast.makeText(getApplication(), "YOU NEED TO FILL YOUR NAME",Toast.LENGTH_SHORT);
-                  }
-
-              } catch (Exception e){
-                  e.printStackTrace();
-                  Toast.makeText(getApplication(), "ERROR, TRY AGAIN !", Toast.LENGTH_SHORT);
-              }
-
-              try{
-                  String date = dateku.getText().toString();
-                  if (date != null && date != ""){
-                      Intent i = new Intent(MainActivity.this, Kirimdata.class);
-                      i.putExtra(KEY_Nim, date);
-                      startActivity(i);
-
-                  } else {
-                      Toast.makeText(getApplication(), "YOU NEED TO FILL YOUR NAME",Toast.LENGTH_SHORT);
-                  }
-
-              } catch (Exception e){
-                  e.printStackTrace();
-                  Toast.makeText(getApplication(), "ERROR, TRY AGAIN !", Toast.LENGTH_SHORT);
-              }
+              nama = nimaku.getText().toString();
+              nim = namaku.getText().toString();
+              tanggal = dateku.getText().toString();
 
 
+              Intent intent = new Intent(MainActivity.this, Kirimdata.class);
+              intent.putExtra("nama", nama);
+              intent.putExtra("nik", nim);
+              intent.putExtra("tanggal", tanggal);
+              startActivity(intent);
 
           }
       });
